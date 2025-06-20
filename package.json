@@ -1,0 +1,12 @@
+{
+  "name": "redactedos_server",
+  "version": "0.0.1",
+  "description": "A simple server for redactedos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node index.js"
+  },
+  "author": "differrari",
+  "license": "ISC"
+}
