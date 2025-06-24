@@ -1,4 +1,4 @@
-const http = require('http');
+const http = require('http')
 
 var payload = {
   content: [
@@ -22,10 +22,15 @@ var payload = {
 }
 
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.end(JSON.stringify(payload));
-});
+  res.writeHead(200, { 'Content-Type': 'application/json' })
+  res.end(JSON.stringify(payload))
+})
 
-server.listen(80, () => {
-  console.log('Server running on port 80');
-});
+module.exports = {
+  server,
+  start: (port = 80) => {
+    server.listen(80, () => {
+      console.log('Server running on port 80')
+    })
+  }
+}
